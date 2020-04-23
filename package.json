@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build0": "npx webpack"
+    "build0": "npx webpack",
+    "build1": "webpack",
+    "build1_1": "npx webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
