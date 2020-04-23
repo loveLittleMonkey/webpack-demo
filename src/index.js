@@ -1,5 +1,6 @@
 import _ from "lodash";
 import "./style.css";
+import Icon from "./5.jpeg";
 
 function component() {
   let element = document.createElement("div");
@@ -9,6 +10,11 @@ function component() {
     alert("clicking");
   });
   element.classList.add("hello");
+
+  // 将图像添加到我们已经存在的 div 中。
+  var myIcon = new Image();
+  myIcon.src = Icon;
+  element.appendChild(myIcon);
 
   return element;
 }
