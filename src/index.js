@@ -1,11 +1,13 @@
+import printMe from "./print.js";
+
 function component() {
   let element = document.createElement("div");
-
   element.innerHTML = "测试webpack知识点";
-  element.addEventListener("click", () => {
-    alert("clicking");
-  });
-  element.classList.add("hello");
+
+  let btn = document.createElement("button");
+  btn.innerHTML = "点击这里，然后查看 console！";
+  btn.onclick = printMe;
+  element.appendChild(btn);
 
   return element;
 }
