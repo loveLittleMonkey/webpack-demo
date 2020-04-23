@@ -1,4 +1,5 @@
 import _ from "lodash";
+import "./style.css";
 
 function component() {
   let element = document.createElement("div");
@@ -7,6 +8,7 @@ function component() {
   element.addEventListener("click", () => {
     alert("clicking");
   });
+  element.classList.add("hello");
 
   return element;
 }

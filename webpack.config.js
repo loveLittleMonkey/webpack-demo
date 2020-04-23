@@ -10,10 +10,19 @@ const path = require("path");
 const config = {
   entry: "./src/index.js",
   output: {
-    filename: "main.js",
+    filename: "bundle.js",
     path: path.join(__dirname, "dist"),
   },
   mode: "none", // https://webpack.js.org/configuration/mode/ development | production | none
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+    // webpack 根据正则表达式，来确定应该查找哪些文件，并将其提供给指定的 loader。在这个示例中，所有以 .css 结尾的文件，都将被提供给 style-loader 和 css-loader。
+  },
 };
 
 module.exports = config;
