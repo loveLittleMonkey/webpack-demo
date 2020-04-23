@@ -1,6 +1,7 @@
 import _ from "lodash";
 import "./style.css";
 import Icon from "./5.jpeg";
+import Data from "./data.xml";
 
 function component() {
   let element = document.createElement("div");
@@ -35,6 +36,7 @@ function component2() {
 }
 
 document.body.appendChild(component2());
+console.log(Data);
 
 window.addEventListener("beforeunload", (event) => {
   debugger;
