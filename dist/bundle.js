@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _5_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var _5_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 
 
 
@@ -102,7 +102,13 @@ __webpack_require__.r(__webpack_exports__);
 function component() {
   let element = document.createElement("div");
 
-  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(["Hello", "webpack"], " ");
+  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(
+    [
+      "说金钱是罪恶，都在捞;说美女是祸水，都想要;说高处不胜寒，都在爬;说烟酒伤身体，都不戒;说天堂最美好，都不去!",
+      "字体库字体",
+    ],
+    " "
+  );
   element.addEventListener("click", () => {
     alert("clicking");
   });
@@ -117,6 +123,23 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+function component2() {
+  let element = document.createElement("div");
+  element.innerHTML =
+    "说金钱是罪恶，都在捞;说美女是祸水，都想要;说高处不胜寒，都在爬;说烟酒伤身体，都不戒;说天堂最美好，都不去! 普通字体";
+  return element;
+}
+
+document.body.appendChild(component2());
+
+window.addEventListener("beforeunload", (event) => {
+  debugger;
+  // Cancel the event as stated by the standard.
+  event.preventDefault();
+  // Chrome requires returnValue to be set.
+  event.returnValue = "";
+});
 
 
 /***/ }),
@@ -17593,10 +17616,21 @@ module.exports = function (list, options) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(7);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(8);
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(9);
+var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(10);
+var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(11);
+var ___CSS_LOADER_URL_IMPORT_3___ = __webpack_require__(12);
+var ___CSS_LOADER_URL_IMPORT_4___ = __webpack_require__(13);
+var ___CSS_LOADER_URL_IMPORT_5___ = __webpack_require__(14);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___, { hash: "?#iefix" });
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___, { hash: "#AlibabaPuHuiTiL" });
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
 // Module
-exports.push([module.i, ".hello {\n  color: red;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"webfont\";\n  font-display: swap;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); /* IE9*/\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"embedded-opentype\"),\n     url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff2\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"woff\"),\n     url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"truetype\"),\n    \n      url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ") format(\"svg\"); /* iOS 4.1- */\n  font-weight: 600;\n  font-style: normal;\n}\n\n.hello {\n  color: red;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + ");\n  font-family: \"webfont\";\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -17743,6 +17777,46 @@ module.exports = function (url, options) {
 
 /***/ }),
 /* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "a55fbd8437756141e1163c43b95f22c5.eot");
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "e8c5f9afa0deb2f259561c8a9fd3b9d7.woff2");
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "89c4fcfb716a9b007430dce91c81fec1.woff");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "a380d6d9b907b4a70a2a894fdc57b724.ttf");
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "325159e90771c8e6d4cb9cd9516b6bed.svg");
+
+/***/ }),
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
