@@ -1,4 +1,8 @@
-import about from "./about.md";
+// import Vue from "vue"; // 在index.html 引入，Vue被注入在html中
+import App from "./index.vue";
 
-console.log(about);
-// 希望 about => '<h1>About</h1><p>this is a markdown file.</p>'
+Vue.config.productionTip = false;
+
+new Vue({
+  render: (h) => h(App),
+}).$mount("#app");
