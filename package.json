@@ -19,6 +19,8 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "html-loader": "^1.1.0",
+    "lodash": "^4.17.15",
+    "marked": "^1.0.0"
   }
 }

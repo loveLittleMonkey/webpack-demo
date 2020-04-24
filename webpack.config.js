@@ -8,9 +8,12 @@ const path = require("path");
  * @type {Configuration}
  */
 const config = {
-  entry: "./src/index.js",
+  entry: {
+    css: "./src/style.css",
+    md: "./src/index.js",
+  },
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: path.join(__dirname, "dist"),
   },
   mode: "none", // https://webpack.js.org/configuration/mode/ development | production | none
@@ -18,10 +21,22 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ["css-loader"],
+        /**
+         * css-loader 的作用是将 CSS 模块转换为一个 JS 模块，具体的实现方法是将我们的 CSS 代码 push 到一个数组中，这个数组是由 css-loader 内部的一个模块提供的，但是整个过程并没有任何地方使用到了这个数组。
+         * 样式没有生效的原因是： css-loader 只会把 CSS 模块加载到 JS 代码中，而并不会使用这个模块。
+         * 所以这里我们还需要在 css-loader 的基础上再使用一个 style-loader，把 css-loader 转换后的结果通过 style 标签追加到页面上。
+         * 安装完 style-loader 之后，我们将配置文件中的 use 属性修改为一个数组，将 style-loader 也放进去。这里需要注意的是，一旦配置多个 Loader，执行顺序是从后往前执行的，所以这里一定要将 css-loader 放在最后，因为必须要 css-loader 先把 CSS 代码转换为 JS 模块，才可以正常打包
+         */
+        // use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.md$/,
+        // 直接使用相对路径
+        use: "./markdown-loader",
+        // use: ["html-loader", "./markdown-loader"],
       },
     ],
-    // webpack 根据正则表达式，来确定应该查找哪些文件，并将其提供给指定的 loader。在这个示例中，所有以 .css 结尾的文件，都将被提供给 style-loader 和 css-loader。
   },
 };
 
