@@ -9,7 +9,7 @@ const config = {
     filename: "[name].bundle.js",
     path: path.join(__dirname, "dist"),
   },
-  mode: "none",
+  mode: "development",
   module: {
     rules: [
       {
@@ -23,8 +23,8 @@ const config = {
     ],
   },
   plugins: [new VueLoaderPlugin()],
-  resolve: {
-    alias: {},
+  devServer: {
+    contentBase: "./dist",
   },
 };
 
