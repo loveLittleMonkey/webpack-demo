@@ -1,21 +1,11 @@
 <template>
   <div class="m-code-button">
-    <mu-button :size="'L'" :radius="false" @click="components_show"
-      >components_show</mu-button
-    >
-    <mu-button :size="'L'" :radius="false" @click="plugins_show"
-      >plugins_show</mu-button
-    >
+    <mu-button :size="'L'" :radius="false" @click="components_show">components_show</mu-button>
+    <mu-button :size="'L'" :radius="false" @click="plugins_show">plugins_show</mu-button>
+    <mu-button :size="'L'" :radius="false" @click="print">使用另一个入口的printer函数</mu-button>
 
-    <mu-dialog
-      v-model="show"
-      title="发现新版本"
-      cancel-text="不再提示"
-      confirm-text="立即更新"
-      text="发现精彩1.3.9已经发布，欢迎到各大应用商店下载！"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-    ></mu-dialog>
+    <mu-dialog v-model="show" title="发现新版本" cancel-text="不再提示" confirm-text="立即更新" text="发现精彩1.3.9已经发布，欢迎到各大应用商店下载！"
+      @confirm="onConfirm" @cancel="onCancel"></mu-dialog>
   </div>
 </template>
 
@@ -27,6 +17,9 @@ export default {
     };
   },
   methods: {
+    print() {
+      printMe()
+    },
     components_show() {
       this.show = true;
     },
