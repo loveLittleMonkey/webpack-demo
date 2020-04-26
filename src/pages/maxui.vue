@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="example">{{ msg }}</div> -->
   <div class="m-code-button">
     <mu-button :size="'L'" :radius="false" @click="components_show"
       >components_show</mu-button
@@ -24,7 +23,6 @@
 export default {
   data() {
     return {
-      msg: "Hello world!",
       show: false,
     };
   },
@@ -61,8 +59,4 @@ export default {
 };
 </script>
 
-<style>
-.example {
-  color: red;
-}
-</style>
+<style></style>
