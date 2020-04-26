@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   entry: {
@@ -10,6 +11,11 @@ const config = {
     path: path.join(__dirname, "dist"),
   },
   mode: "none", // https://webpack.js.org/configuration/mode/ development | production | none
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "管理输出",
+    }),
+  ],
 };
 
 module.exports = config;
