@@ -1,5 +1,5 @@
 (()=> {
   window.printMe = ()=>{
-    console.log("I get called from print.js!");
+    cosnole.log("I get called from print.js!"); // webpack devtool: 'inline-source-map'
   }
 })();
