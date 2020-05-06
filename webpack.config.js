@@ -7,6 +7,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const utils = require('./utils');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin');
+const RemoveCommentsPlugin = require('./remove-comments-plugin')
 
 const config = {
   entry: {
@@ -36,6 +37,7 @@ const config = {
         )
     },
     plugins: [
+        new RemoveCommentsPlugin(),
         new MiniCssExtractPlugin({
             filename: utils.assetsPath('css/[name].css')
         }),

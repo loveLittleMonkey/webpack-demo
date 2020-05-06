@@ -30,7 +30,8 @@ npm install --save-dev webpack-dev-server
 
 ./webpack.config.js 修改配置文件，告诉开发服务器(dev server)，在哪里查找文件
 从打包入口开始设计的文件一旦更新即可刷新打包后的资源看到效果
-怎么理解开启的服务器访问的是 dist 下的资源？ 这个 dist 是虚拟的 dist，同时也是实际的 dist？
+
+怎么理解开启的服务器访问的是 dist 下的资源？ 这个 dist 是虚拟内存的 dist，同时也是实际路径下的 dist？
 
 ```
 devServer: {
